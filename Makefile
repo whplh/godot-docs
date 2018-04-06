@@ -161,9 +161,9 @@ info:
 	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo."
 
 gettext:
-	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) ../templates
+	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) ../sphinx/templates
 	@echo
-	@echo "Build finished. The message catalogs are in ../templates."
+	@echo "Build finished. The message catalogs are in ../sphinx/templates."
 
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes

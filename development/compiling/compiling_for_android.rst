@@ -133,6 +133,27 @@ Troubleshooting
 It might be necessary to clean the build cache between two APK compilations,
 as some users have reported issues when building the two export templates
 one after the other.
+(In Linux:) If you encounter a license error f.ex. when using the command line tools make sure to run:
+::
+
+    ./sdkmanager --licenses
+    
+and go ahead and accept all licenses.
+Also make sure to use the correct java version if you have multiple:
+::
+
+    sudo update-alternatives --config java
+
+and verify the Variables:
+::
+
+    export ANDROID_HOME=/path/to/android-sdk
+    export ANDROID_NDK_ROOT=/path/to/android-ndk         //like above, but if it fails double check
+    export JAVA_HOME=/path/to/your_java_version      //f.ex.: /usr/lib/jvm/java-8-openjdk-amd64
+    ANDROID_SDK_VERSION=28.0.3  //Double check your version here
+    export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/Sdk/build-tools/$ANDROID_SDK_VERSION
+
+
 
 Using the export templates
 --------------------------
